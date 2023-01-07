@@ -37,6 +37,19 @@ app.get("/delineated-fields", async (req: Request, res: Response) => {
   }
 });
 
+app.get("/delineated-areas", async (req: Request, res: Response) => {
+  try {
+    const result = await queryManager.query(
+      "SELECT row_to_json(t) FROM (SELECT * FROM coverage) t"
+    );
+
+    return res.json(result);
+  } catch (error) {
+    return res.status(500).send("Server error");
+  }
+});
+
 app.listen(8080);
 
 // http://localhost:8080/delineated-fields?location=11.190343929175015,60.742178240839934
+// http://localhost:8080/delineated-areas

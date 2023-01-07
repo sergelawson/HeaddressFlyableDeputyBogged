@@ -8,6 +8,8 @@ sqlalchemy = "*"
 geopandas = "*"
 psycopg2-binary = "*"
 geoalchemy2 = "*"
+shapely = "*"
+pandas = "*"
 
 [dev-packages]
 
