@@ -1,0 +1,8 @@
+./api/node_modules/
+./api/build/
+./postgres/test_shapefile/
+./postgres/test_shapefile2/
+
+# package directories
+node_modules/
+jspm_packages
