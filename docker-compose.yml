@@ -1,0 +1,15 @@
+version: "2.4"
+services:
+  postgres:
+    build: ./postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: testtest
+
+  api:
+    build: ./api
+    depends_on:
+      - postgres
+    ports:
+      - 8080:8080
