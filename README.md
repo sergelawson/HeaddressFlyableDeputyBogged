@@ -9,20 +9,23 @@ The api folder contains a Dockerized Node.js Express backend that handles reques
  ``` 
  docker-compose up --build 
  ```
-
-Install pipenv for dependency management in the python script
-https://pipenv.pypa.io/en/latest/
+While docker is running open an new tab in your terminal and install pipenv for dependency management in the python script: https://pipenv.pypa.io/en/latest/
 
  
 ``` 
 cd postgres && pipenv install 
 ```
 
-Run the first python script to load data into the databse:
+Run the first python script to load data into the databse (shapefiles are missing in this repository):
 
 ``` 
-pipenv run python run.py
-pipenv run python coverage.py
+pipenv run python run.py # import the shape files into the database table fields
+pipenv run python coverage.py # create polygon coverage and import into the database table coverage
 ```
 
 
+#### Test API Endpoints
+
+- http://localhost:8080/delineated-fields?location=11.190343929175015,60.742178240839934
+
+- http://localhost:8080/delineated-areas
