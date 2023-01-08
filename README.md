@@ -1,6 +1,6 @@
 ## HeaddressFlyableDeputyBogged
 
-### Techologies: Postgres (Postgis), Python, Node.js, Express, Typescript, Docker
+### Technologies: Postgres (Postgis), Python, Node.js, Express, Typescript, Docker
 
 The postgres folder contains a dockerfile that installs postgres with postgis extension, as well as python scripts that import shape files into postgis.
 The api folder contains a Dockerized Node.js Express backend that handles requests through API endpoints.
